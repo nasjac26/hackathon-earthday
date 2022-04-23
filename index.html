@@ -1,14 +1,99 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+
+<html lang="en">
+    
 <head>
 
-    <link rel="stylesheet" href="">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="Personal Carbon Footprint Calculator" content="A visualization of your personal reductions in carbon creation!">
+    <link rel="stylesheet" href="./styles/styles.css">
+    <!-- <link rel="icon" href="favicon.ico" type="image/x-icon"> -->
+    <title>Earth Day</title>
 
 </head>
 
+
 <body>
 
-    <script src=""></script>
+    <script src="./script.js">
+
+
+    </script>
+    <div id="title">
+        <h1>Check Yr Carbon!</h1>
+        <p>In this section we have the hook or call to action reference</p>
+    </div>
+
+    <!-- This div container holds individual slider containers  TODO: sliders arent tied to anything / need styling / need attributes assigned  -->
+
+    <div className="container">
+        
+        <div className="slider-container">
+            <h2>Meat Consumption</h2>
+            <p>How many days of the week will you commit to omitting meat from your meals?</p>
+            <div class="slider">
+                <input type="range" min="0" max="7" value="50" class="slider" id="meatSlider">
+            </div>
+            <h4>You saved CARBON SAVED HERE</h4>
+
+        </div>
+    
+        <div className="slider-container">
+            <h2>Daily Communting</h2>
+            <p>How do you travel to work?</p>
+            <div class="slider">
+                <input type="range" min="1" max="100" value="50" class="slider" id="commuteSlider">
+            </div>
+            <h4>You saved CARBON SAVED HERE</h4>
+        </div>
+    
+        <div className="slider-container">
+            <h2>Water Usage</h2>
+            <p>How much water do you use?</p>
+            <div class="slider">
+                <input type="range" min="1" max="100" value="50" class="slider" id="waterSlider">
+            </div>
+            <h4>You saved CARBON SAVED HERE</h4>
+
+        </div>
+    
+        <div className="slider-container">
+            <h2>Air miles</h2>
+            <p>What are the co2 emissions of your flight</p>
+            <div class="slider">
+                <input type="range" min="1" max="100" value="50" class="slider" id="airSlider">
+            </div>
+            <h4>You saved CARBON SAVED HERE</h4>
+
+        </div>
+        
+        <div className="slider-container">
+            <h2>Lightbulbs</h2>
+            <p>How many LED Lightbulbs do you use?</p>
+            <div class="slider">
+                <input type="range" min="1" max="100" value="50" class="slider" id="bulbSlider">
+            </div>
+            <h4>You saved CARBON SAVED HERE</h4>
+        </div>   
+    </div>
+    
+    <div className="container">
+        <div className="results-container">
+            <h1>With the changes you have commited to you collectively will reduce your carbon footprint by XXXX Lbs a year.</h1>
+
+            <p>This is the equivalent of:</p>
+                <h2>XXXXX Miles of a Shipping Frieghter trip across the atlantic (workshop this)</h2>
+                <h1>IMAGE REPRESTATION HERE</h1>
+
+                <h2>XXXXX Miles of a private jet trip</h2>
+                <h1>IMAGE REPRESTATION HERE</h1>
+
+
+            
+        </div>
+    </div>
+
 
 </body>
 
