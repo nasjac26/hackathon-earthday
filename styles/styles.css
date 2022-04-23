@@ -1,10 +1,21 @@
 body {
-    margin: 0;
+    margin: auto;
     /* font-family: Times New Roman;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; */
     background: #e0ffcd;
   }
-/* .container{
 
-} */
+.title{
+  text-align: center;
+}
+
+.container {
+  justify-content:center;
+  border: black;
+  border-style: double;
+  margin: auto;
+  width: 800px;
+  padding: 20px;
+  background-color: #F0FFFF;
+}
