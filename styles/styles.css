@@ -19,3 +19,13 @@ body {
   padding: 20px;
   background-color: #F0FFFF;
 }
+
+.container-for-results{
+  justify-content:center;
+  border: black;
+  border-style: double;
+  margin: auto;
+  width: 800px;
+  padding: 20px;
+  background-color: #F0FFFF;
+}
