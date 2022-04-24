@@ -9,11 +9,23 @@ let sliderArr = document.querySelectorAll('input')
 function addText(arr){
     for (let i = 0; i < arr.length; i++){
         let h = document.createElement("h1")
+        h.setAttribute('id', `sliderArr${[i]}Value`)
         h.textContent = sliderArr[i].value
         arr[i].append(h)
     }
 }
 
+
+//updates value string above sider on change
+function addEventListenerToSliders(arr){
+    for (let i = 0; i < arr.length; i++){
+        sliderArr[i].addEventListener('change', function() {
+            let value = document.getElementById(`sliderArr${[i]}Value`)
+            value.innerText = sliderArr[i].value
+        })
+    }
+}
+
 //DOES NOT APPEND OUTSIDE OF CONSOLE CHECK LOOM
 addText(sliderDescriptionArr)
-
+addEventListenerToSliders(sliderArr)
