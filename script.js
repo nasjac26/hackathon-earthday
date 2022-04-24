@@ -11,16 +11,44 @@ let sliderDescriptionArr = document.getElementsByClassName('slider-description')
 //   output.innerHTML = this.value;
 // }
 
+//meat driving water flying bulbs
+function multiplyingCarbonValues() {
+    let arrayOfCarbonNumbers = document.getElementsByClassName("carbonResult");
+    //REMINDER, these multipliers are form yearly amount, so the weekly * 52
+    //all are in POUNDS by default
+    let meat = parseInt(arrayOfCarbonNumbers[0]) * 302;
+    let driving = parseInt(arrayOfCarbonNumbers[1]) * 40.56;
+    let water = parseInt(arrayOfCarbonNumbers[2]) * .468;
+    let flying = parseInt(arrayOfCarbonNumbers[3]) * .1325;
+    let bulbs = parseInt(arrayOfCarbonNumbers[4]) * 286.4;
+    let yearlyCarbonSaved = meat + driving + water + flying + bulbs;
+
+
+}
 
 function carbonTotal(){
-    let arrayOfCarbonNumbers = document.getElementsByClassName("carbonResult");
+    // let arrayOfCarbonNumbers = document.getElementsByClassName("carbonResult");
+    // carbon total location
     let carbonTotal = document.querySelector("#carbontotal");
-    let sumTotalOfCarbonValues = 0;
-    for (let i = 0; i < arrayOfCarbonNumbers.length; i++){
-    sumTotalOfCarbonValues += parseInt(arrayOfCarbonNumbers[i].innerText);
-    }
 
-    carbonTotal.innerText = `You have offset ${sumTotalOfCarbonValues} pounds of CO2`; 
+    //array of slider values
+    let arrayOfCarbonNumbers = document.getElementsByClassName("carbonResult");
+
+    //REMINDER, these multipliers are form yearly amount, so the weekly * 52
+    //all are in POUNDS by default
+    let meat = parseInt(arrayOfCarbonNumbers[0].innerText) * 302;
+    debugger;
+    let driving = parseInt(arrayOfCarbonNumbers[1].innerText) * 40.56;
+    let water = parseInt(arrayOfCarbonNumbers[2].innerText) * .468;
+    let flying = parseInt(arrayOfCarbonNumbers[3].innerText) * .1325;
+    let bulbs = parseInt(arrayOfCarbonNumbers[4].innerText) * 286.4;
+    let yearlyCarbonSaved = Math.ceil(meat + driving + water + flying + bulbs);
+    
+    // for (let i = 0; i < arrayOfCarbonNumbers.length; i++){
+    // sumTotalOfCarbonValues += parseInt(arrayOfCarbonNumbers[i].innerText);
+    // }
+
+    carbonTotal.innerText = `You have offset ${yearlyCarbonSaved} pounds of CO2`; 
 
 } 
 
