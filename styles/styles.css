@@ -3,8 +3,8 @@ body {
     /* font-family: Times New Roman;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; */
+    background: #e0ffcd;
     background-image: url("../images/leaves.gif");
-    /* background: #e0ffcd; */
     background-position: top;
     background-repeat: no-repeat;
   }
@@ -31,4 +31,8 @@ body {
   width: 800px;
   padding: 20px;
   background-color: #F0FFFF;
+}
+
+input {
+  width: 100%
 }

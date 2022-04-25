@@ -29,67 +29,74 @@
             <br>
         
         <div class="slider-container">
+            
             <h2>Meat Consumption</h2>
             <p class="slider-description">How many meals a weak will you ommit meat?</p>
-            <div class="slider">
-                <input type="range" min="0" max="21" value="0" class="slider" id="meatSlider">
-            </div>
-
+            
+            <input type="range" min="0" max="21" value="0" class="slider" id="meatSlider">
+            <p>Value: <span class="carbonResult" id="meatValue"></span></p>
         </div>
             <br>
     
+
         <div class="slider-container">
+
             <h2>Daily Communting</h2>
             <p class="slider-description">How many driving miles each week could you use an alternate form of transportation for?</p>
             <p>For context, the average american drives 275 miles each week.</p>
-
-            <div class="slider">
-                <input type="range" min="0" max="1000" value="0" class="slider" id="commuteSlider">
-            </div>
+            
+            <input type="range" min="0" max="1000" value="0" class="slider" id="commuteSlider">
+            <p>Value: <span class="carbonResult" id="commuteValue"></span></p>
         </div>
             <br>
     
         <div class="slider-container">
+            
             <h2>Water Usage</h2>
             <p class="slider-description">How much water could you save in a week?</p>
-            <div class="slider">
-                <input type="range" min="0" max="100" value="0" class="slider" id="waterSlider">
-            </div>
+            
             <p>For context, the average 10 minute shower uses 20 gallons, an average washing machine uses 19 gallons per load, and an average dishwaser uses 4.2 gallons per dishwasher load.</p>
             <p>(Fun fact, we drink about 1% of the total water we use)</p>
 
+            <input type="range" min="0" max="100" value="0" class="slider" id="waterSlider">
+            <p>Value: <span class="carbonResult" id="waterValue"></span></p>
+
         </div>
             <br>
     
         <div class="slider-container">
+            
             <h2>Air Miles</h2>
             <p class="slider-description">How many miles of flying can you abstain from in a year?</p>
-            <div class="slider">
-                <input type="range" min="0" max="100000" value="0" class="slider" id="airSlider">
-            </div>
-
+            
+            <input type="range" min="0" max="50000" value="0" class="slider" id="airSlider">
+            <p>Value: <span class="carbonResult" id="airValue"></span></p>
         </div>
-            <br>
+        <br>
         
+
         <div class="slider-container">
+            
             <h2>Lightbulbs</h2>
             <p class="slider-description">How many incandescent bulbs can you replace with LED lightbulbs in your home?</p>
-            <div class="slider">
-                <input type="range" min="0" max="100" value="0" class="slider" id="bulbSlider">
-            </div>
+            
+            <input type="range" min="0" max="100" value="0" class="slider" id="bulbSlider" >
+            <p>Value: <span class="carbonResult" id="bulbValue"></span></p>
             <br>
-            <button onclick="carbonTotal()">Calculate my good deeds</button> 
-            <h4 id="carbontotal"></h4>
+
+            <button onclick="carbonTotal()">Calculate my good deeds</button>
+
+            <h1 id="carbontotal"></h1>
         </div>   
     </div>
-  
-      <!-- This div container holds results  TODO: results arent tied to anything / need styling / need text workshopped  -->
 
-  
+<!-- This div container holds results  TODO: results arent tied to anything / need styling / need text workshopped  -->
+
+
     <div class="container-for-results">
         <div class="">
             <h1>With the changes you have commited to you collectively will reduce your carbon footprint by XXXX Lbs a year.</h1>
-  
+
             <p>This is the equivalent of:</p>
                 <h2>XXXXX Miles of a Shipping Frieghter trip across the atlantic </h2>
                 <h1>IMAGE REPRESTATION HERE</h1>
@@ -101,9 +108,66 @@
             
         </div>
     </div>
-    <script src="./script.js">
-      
+    <script src="./script.js"></script>
+    <script>
+        let meatSlider = document.getElementById("meatSlider");
+        let meatValue = document.getElementById("meatValue");
+
+        meatValue.innerText = meatSlider.value;
+
+        meatSlider.oninput = function() {
+            meatValue.innerText = this.value
+        }
+
     </script>
+
+<script>
+    let commuteSlider = document.getElementById("commuteSlider");
+    let commuteValue = document.getElementById("commuteValue");
+
+    commuteValue.innerText = commuteSlider.value;
+
+    commuteSlider.oninput = function() {
+        commuteValue.innerText = this.value
+    }
+
+</script>
+
+<script>
+    let waterSlider = document.getElementById("waterSlider");
+    let waterValue = document.getElementById("waterValue");
+
+    waterValue.innerText = waterSlider.value;
+
+    waterSlider.oninput = function() {
+        waterValue.innerText = this.value
+    }
+
+</script>
+
+<script>
+    let airSlider = document.getElementById("airSlider");
+    let airValue = document.getElementById("airValue");
+
+    airValue.innerText = airSlider.value;
+
+    airSlider.oninput = function() {
+        airValue.innerText = this.value
+    }
+
+</script>
+
+<script>
+    let bulbSlider = document.getElementById("bulbSlider");
+    let bulbValue = document.getElementById("bulbValue");
+
+    bulbValue.innerText = bulbSlider.value;
+
+    bulbSlider.oninput = function() {
+        bulbValue.innerText = this.value
+    }
+
+</script>
 
 </body>
 
