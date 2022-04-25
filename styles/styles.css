@@ -1,8 +1,8 @@
 body {
     margin: auto;
-    /* font-family: Times New Roman;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale; */
+    font-family: 'Open Sans', sans-serif;    
+    /* -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; */ 
     background: #e0ffcd;
     background-image: url("../images/leaves.gif");
     background-position: top;
@@ -10,29 +10,88 @@ body {
   }
 
 .title{
+  justify-content:center;
   text-align: center;
+
+  margin: auto;
+  width: 900px;
+  padding-top: 200px;
+  padding-bottom: 20px;
 }
 
 .container {
   justify-content:center;
   border: black;
-  border-style: double;
   margin: auto;
   width: 800px;
   padding: 20px;
-  background-color: #F0FFFF;
+  background-color: #e9f6e1;
 }
 
 .container-for-results{
   justify-content:center;
-  border: black;
-  border-style: double;
   margin: auto;
   width: 800px;
   padding: 20px;
-  background-color: #F0FFFF;
+  background-color: #e9f6e1;
+}
+
+.slider-name{
+  margin-top: -20px;
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 15px;
+  border-radius: 5px;  
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%; 
+  background: #04AA6D;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #04AA6D;
+  cursor: pointer;
 }
 
 input {
   width: 100%
+}
+
+button {
+  font-family: 'Open Sans', sans-serif;
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+#comparison {
+  display: none;
+}
+
+.titleText {
+  width: 900px;
+  text-align: center;
+  margin: auto;
 }

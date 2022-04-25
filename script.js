@@ -28,42 +28,23 @@ function carbonTotal(){
     let flying = parseInt(arrayOfCarbonNumbers[3].innerText) * .1325;
     let bulbs = parseInt(arrayOfCarbonNumbers[4].innerText) * 286.4;
     let yearlyCarbonSaved = Math.ceil(meat + driving + water + flying + bulbs);
+    let hiddenResultsLocation = document.getElementById("hiddenResults");
+    let shippingMilesLocation = document.getElementById("shippingMiles");
+    let jetMilesLocation = document.getElementById("jetMiles");
     
-    // for (let i = 0; i < arrayOfCarbonNumbers.length; i++){
-    // sumTotalOfCarbonValues += parseInt(arrayOfCarbonNumbers[i].innerText);
-    // }
-
     carbonTotal.innerText = `You have offset ${yearlyCarbonSaved} pounds of CO2`; 
+    let hiddenDiv = document.getElementById('comparison');
+    
+    hiddenDiv.style.display = "block";
 
+    shippingMilesLocation.innerText = parseFloat(yearlyCarbonSaved / 1142.9).toFixed(2);
+    jetMilesLocation.innerText = parseFloat(yearlyCarbonSaved / 4431.4).toFixed(2);
+
+
+
+    
 } 
 
 //create an arr of the sliders
 let sliderArr = document.getElementsByClassName('slider')
 
-//Script to add h1 value to each TODO: Right now it is hardcoded to starting value need ONCHANGE
-// function addText(arr){
-//     for (let i = 0; i < arr.length; i++){
-//         let newH1 = document.createElement("h1");
-//         newH1.setAttribute('id', `sliderArr${[i]}Value`);
-//         newH1.setAttribute('class', `carbonResult`);
-//         newH1.textContent = sliderArr[i].value;
-//         sliderArr[i].appendChild(newH1);
-//     }
-// }
-
-
-// updates value string above slider on change
-function addEventListenerToSliders(arr){
-    for (let i = 0; i < arr.length; i++){
-        sliderArr[i].addEventListener('change', function() {
-            let value = document.getElementById(`sliderArr${[i]}Value`)
-            value.innerText = sliderArr[i].value
-        })
-    }
-}
-
-
-
-//DOES NOT APPEND OUTSIDE OF CONSOLE CHECK LOOM
-addText(sliderDescriptionArr)
-addEventListenerToSliders(sliderArr)

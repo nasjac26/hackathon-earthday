@@ -7,8 +7,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="Personal Carbon Footprint Calculator" content="A visualization of your personal reductions in carbon creation!">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./styles/styles.css">
     <link rel="icon" href="./images/earthday_icon_small.png">
+    
     <title>Earth Day</title>
     
 </head>
@@ -19,8 +23,8 @@
     
   
     <div class="title">
-        <h1 id="titleText">Check Yr Carbon!</h1>
-        <p>In this section we have the hook or call to action reference</p>
+            <h1 class="titleText">Personal Carbon Calculator</h1>
+            <p class="titleText">We built this calculator to help ourselves learn how much carbon we put into the atmosphere just by existing. There are steps that each of us can do to reduce our impact, however, what does this personal responsibility look like when compared to global infrastructure and personal excess? We tried to generalize and gather accurate data but have made many assumptions about averages and material conditions. We know that this is not a perfect comparison but hope that it will help you as it did us to contextualize climate change and it's contributors.</p>
     </div>
 
     <!-- This div container holds individual slider containers  TODO: sliders arent tied to anything / need styling / need attributes assigned  -->
@@ -30,7 +34,7 @@
         
         <div class="slider-container">
             
-            <h2>Meat Consumption</h2>
+            <h2 class="slider-name">Meat Consumption</h2>
             <p class="slider-description">How many meals a weak will you ommit meat?</p>
             
             <input type="range" min="0" max="21" value="0" class="slider" id="meatSlider">
@@ -41,7 +45,7 @@
 
         <div class="slider-container">
 
-            <h2>Daily Communting</h2>
+            <h2 class="slider-name">Daily Communting</h2>
             <p class="slider-description">How many driving miles each week could you use an alternate form of transportation for?</p>
             <p>For context, the average american drives 275 miles each week.</p>
             
@@ -52,7 +56,7 @@
     
         <div class="slider-container">
             
-            <h2>Water Usage</h2>
+            <h2 class="slider-name">Water Usage</h2>
             <p class="slider-description">How much water could you save in a week?</p>
             
             <p>For context, the average 10 minute shower uses 20 gallons, an average washing machine uses 19 gallons per load, and an average dishwaser uses 4.2 gallons per dishwasher load.</p>
@@ -66,7 +70,7 @@
     
         <div class="slider-container">
             
-            <h2>Air Miles</h2>
+            <h2 class="slider-name">Air Miles</h2>
             <p class="slider-description">How many miles of flying can you abstain from in a year?</p>
             
             <input type="range" min="0" max="50000" value="0" class="slider" id="airSlider">
@@ -77,7 +81,7 @@
 
         <div class="slider-container">
             
-            <h2>Lightbulbs</h2>
+            <h2 class="slider-name">Lightbulbs</h2>
             <p class="slider-description">How many incandescent bulbs can you replace with LED lightbulbs in your home?</p>
             
             <input type="range" min="0" max="100" value="0" class="slider" id="bulbSlider" >
@@ -92,19 +96,26 @@
 
 <!-- This div container holds results  TODO: results arent tied to anything / need styling / need text workshopped  -->
 
+    <br>
+    <br>
 
-    <div class="container-for-results">
-        <div class="">
-            <h1>With the changes you have commited to you collectively will reduce your carbon footprint by XXXX Lbs a year.</h1>
+    <div class="container-for-results" id="comparison">
+        <div>
+            
+            <h1>This is the equivalent of:</h1>
+                
+            <h2><span id="shippingMiles">0</span> miles of a single shipping freighter trip!</h2>
+                
+            <h2><span id="jetMiles">0</span> flight hours of one private jet!</h2>
+                
+            <h4>The concept of personal responsibility for climate change (your "carbon footprint") was created  <a href="https://interestingengineering.com/carbon-footprint-coined-by-big-oil-to-blame-you-for-climate-change">by a PR company to shift blame from major contributors</a>. There is only so much a person can do by lifestyle changes. The next step is to take action. Demand change! </h4>
 
-            <p>This is the equivalent of:</p>
-                <h2>XXXXX Miles of a Shipping Frieghter trip across the atlantic </h2>
-                <h1>IMAGE REPRESTATION HERE</h1>
+            <h4>Contact your <a href="https://www.senate.gov/states/statesmap.htm">Senators</a> and <a href="https://www.house.gov/representatives">Representatives</a> to demand change for the future! If you need help with who to call or what to say here is are some examples:</h4> 
 
-                <h2>XXXXX Miles of a private jet trip</h2>
-                <h1>IMAGE REPRESTATION HERE</h1>
+            <h4> <a href="https://www.call4climatenow.com/">call4climatenow</a></h4>
+            <h4><a href="https://climatemuseum.org/call-your-representative">climatemuseum</a></h4>
 
-
+            
             
         </div>
     </div>
